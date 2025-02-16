@@ -23,4 +23,5 @@ class UIStore {
   }
 }
 
+// 2. AND this needs to be wrapped in a createRoot
 export const uiStore = createRoot(() => new UIStore())

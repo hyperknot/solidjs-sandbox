@@ -4,6 +4,7 @@ import './App.css'
 
 function App() {
   onMount(() => {
+    // 1. this needs to be inside onMount
     uiStore.initializeDocs()
   })
 
