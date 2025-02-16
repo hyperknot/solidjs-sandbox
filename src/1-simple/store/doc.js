@@ -13,6 +13,7 @@ export class Doc {
     this.setState = setState
 
     this.isActive = createMemo(() => {
+      // why is this printing every single item when clicking on one?
       console.log(this.state.title)
       return uiStore.state.activeDocID === this.state.uuid
     })
