@@ -1,6 +1,6 @@
 import { createMemo } from 'solid-js'
 import { createStore } from 'solid-js/store'
-import { uiStore } from './uiStore'
+import { uiStore } from './uiStore.js'
 
 export class Doc {
   constructor(init = {}) {

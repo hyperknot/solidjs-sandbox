@@ -1,5 +1,5 @@
 import { For, onMount } from 'solid-js'
-import { uiStore } from './store/uiStore'
+import { uiStore } from './store/uiStore.js'
 import './App.css'
 
 function App() {
