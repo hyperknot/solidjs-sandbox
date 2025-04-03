@@ -1,20 +1,16 @@
-#root {
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root, #non-solid {
   width: 100%;
+  height: 50dvh;
+  background: #eee;
 }
 
-.doc-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30px, 30px));
-}
-
-.doc-item {
-  border: 0.5px solid #ccc;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  font-size: 10px;
-}
-
-.doc-item.active {
-  background-color: #e6e6e6;
+.contentEditable {
+  overflow-y: scroll;
+  height: 100%;
+  background: red;
 }
