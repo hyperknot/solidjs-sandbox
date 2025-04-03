@@ -1,9 +1,10 @@
 import './App.css'
 
 function App() {
-
   return (
-    <div class="contentEditable" contentEditable={true}>solid</div>
+    <div class="contentEditable" contentEditable={true} ref={ref}>
+      solid
+    </div>
   )
 }
 
