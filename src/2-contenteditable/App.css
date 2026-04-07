@@ -3,14 +3,83 @@ body {
   flex-direction: column;
 }
 
-#root, #non-solid {
+#root,
+#non-solid {
   width: 100%;
   height: 50dvh;
   background: #eee;
 }
 
-.contentEditable {
+.ce {
   overflow-y: scroll;
   height: 100%;
-  background: red;
+  /*background: red;*/
+}
+
+/*  prosemirror parent */
+
+.prosemirror-parent .ProseMirror[contenteditable] {
+  --tw-outline-style: none;
+  /*outline-style: var(--tw-outline-style);*/
+  outline-style: none;
+  outline-width: 0;
+}
+
+/* Main ProseMirror styles */
+.prosemirror-parent .ProseMirror {
+  word-wrap: break-word;
+  font-feature-settings: "liga" 0;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  margin-block: 20px;
+  padding-inline: 20px;
+  white-space: pre-wrap;
+  white-space: break-spaces;
+}
+
+/* Line height for break elements */
+.prosemirror-parent.ProseMirror br {
+  --tw-leading: normal;
+  line-height: normal;
+}
+
+.prosemirror-parent.default-browser .placeholder:after {
+  --tw-content: attr(data-placeholder);
+  color: red;
+  content: var(--tw-content);
+  cursor: text;
+  pointer-events: none;
+  position: relative;
+}
+
+[dir="ltr"] .prosemirror-parent.default-browser .placeholder:after {
+  padding-left: 1px;
+}
+
+[dir="rtl"] .prosemirror-parent.default-browser .placeholder:after {
+  padding-right: 1px;
+}
+
+.prosemirror-parent.default-browser .placeholder .ProseMirror-trailingBreak {
+  display: none !important;
+}
+
+/* Firefox-specific placeholder styles */
+.prosemirror-parent.firefox .placeholder:before {
+  --tw-content: attr(data-placeholder);
+  color: orange;
+  content: "content";
+  cursor: text;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* Paragraph styles */
+.prosemirror-parent p {
+  white-space: pre-wrap;
+}
+
+/* Separator styles */
+.prosemirror-parent .ProseMirror-separator {
+  display: none !important;
 }
